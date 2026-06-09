@@ -12,7 +12,7 @@ import java.util.UUID;
 public record ReporteStatusChangedEvent(
 
   UUID eventId,
-  UUID reporteId,
+  String reporteId,
   String estadoAnterior,
   String estadoNuevo,
   String actor,              // Servicio o usuario que realizó el cambio
@@ -26,7 +26,7 @@ public record ReporteStatusChangedEvent(
   if (timestamp == null) timestamp = Instant.now();
  }
 
- public static ReporteStatusChangedEvent of(UUID reporteId, String estadoAnterior,
+ public static ReporteStatusChangedEvent of(String reporteId, String estadoAnterior,
                                             String estadoNuevo, String actor,
                                             String observacion, String ciudadanoPhone) {
   return new ReporteStatusChangedEvent(
