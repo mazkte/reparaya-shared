@@ -21,17 +21,4 @@ public record ReporteStatusChangedEvent(
   Instant timestamp
 
 ) {
- public ReporteStatusChangedEvent {
-  if (eventId == null) eventId = UUID.randomUUID();
-  if (timestamp == null) timestamp = Instant.now();
- }
-
- public static ReporteStatusChangedEvent of(String reporteId, String estadoAnterior,
-                                            String estadoNuevo, String actor,
-                                            String observacion, String ciudadanoPhone) {
-  return new ReporteStatusChangedEvent(
-    UUID.randomUUID(), reporteId, estadoAnterior, estadoNuevo,
-    actor, observacion, ciudadanoPhone, Instant.now()
-  );
- }
 }
