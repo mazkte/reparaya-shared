@@ -10,7 +10,7 @@
 <!--  ─── COORDENADAS ─────────────────────────────────────  -->
 <groupId>pe.edu.reparaya</groupId>
 <artifactId>reparaya-shared</artifactId>
-<version>1.0.0</version>
+<version>1.0.1</version>
 <packaging>jar</packaging>
 <name>ReparaYa :: Shared Kernel</name>
 <description> Librería compartida entre microservicios de ReparaYa. Contiene eventos Kafka, excepciones, seguridad y configuración base. </description>
